@@ -1,9 +1,11 @@
 const containerVideos = document.querySelector(".videos__container")
+const endpointDaAPI = "https://caiobsantos98.github.io/ALURA/projeto-vidflow-main/backend/videos.json"
 
 async function buscarEMostrarVideos () {
     try {
-        const busca = await fetch("http://localhost:3000/videos");
+        const busca = await fetch(endpointDaAPI);
         const videos = await busca.json();
+        console.log(videos)
 
         videos.forEach((video) => {
             if (video.categoria == "") {
