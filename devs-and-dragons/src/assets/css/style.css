@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Smythe", system-ui;
+}
+
+body {
+    background-image: url(../img/fundo-madeira.png);
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* para garantir que fique sobre a imagem de fundo */
+}
+
+header {
+    display: flex;
+    margin: 32px 150px;
+    justify-content: space-between;
+}
+
+.newCharacterBtn {
+    height: 48px;
+    background: linear-gradient(180deg, #FAEC75 0%, #CE9424 100%);
+    border: 3px solid #6C3F00;
+    font-size: 28px;
+    border-radius: 16px;
+    padding: 0 40px;
+    cursor: pointer;
+}
+
+.duelBtn {
+    background-image: url(../img/botao-duelar.png);
+    background-size: 100%;
+    background-position: center ;
+    width: 139px;
+    height: 48px;
+    border-radius: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.characterUl {
+    margin: 20px 0;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selected {
+    transform: translateY(-15px);
+}
+
+.card {
+    width: 252.18px;
+    height: 398px;
+    position: relative;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.mago-card {
+    background-image: url(../img/fundo-carta-verde.png);
+    background-repeat: no-repeat;
+}
+
+.arqueiro-card {
+    background-image: url(../img/fundo-carta-azul.png);
+    background-repeat: no-repeat;
+}
+
+.guerreiro-card {
+    background-image: url(../img/fundo-carta-vermelha.png);
+    background-repeat: no-repeat;
+}
+
+.arqueiro-mago-card {
+    background-image: url(../img/fundo-carta-roxa.png);
+    background-repeat: no-repeat;
+}
+
+.header-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge-container {
+    width: 53.33px;
+    height: 53.33px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 6px;
+}
+
+.mago-badge {
+    background-image: url(../img/combate-mago.png);
+}
+
+.arqueiro-badge {
+    background-image: url(../img/combate-arqueiro.png);
+}
+
+.guerreiro-badge {
+    background-image: url(../img/combate-guerreiro.png);
+}
+
+.arqueiro-mago-badge {
+    background-image: url(../img/combate-arqueiro-mago.png);
+}
+
+.level-container {
+    display: flex;
+    height: 22.86px;
+    margin-top: 8.19px;
+    margin-right: 8.62px;
+    border: 1px solid #817462;
+    border-radius: 4px;
+}
+
+.level-container button {
+    width: 20px;
+    background-color: #CDC8C1;
+    color: #817462;
+    border: none;
+    font-weight: bold;
+}
+
+.plusLevel {
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+}
+
+.minusLevel {
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.level-character-container {
+    display: flex;
+    width: 45.71px;
+    border: 1px solid #817462;
+    font-size: 18px;
+    color: #CDC8C1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.green-level {
+    background: radial-gradient(75% 75% at 50% 50%, #1F270A 0%, #66A002 100%);
+}
+
+.blue-level {
+    background: radial-gradient(75% 75% at 50% 50%, #072041 0%, #145BAB 100%);
+}
+
+.red-level {
+    background: radial-gradient(75% 75% at 50% 50%, #56272D 0%, #C1272D 100%);
+}
+
+.purple-level {
+    background: radial-gradient(270.68% 63.44% at 49.27% 0%, #3D003F 0%, #93278F 100%);
+}
+
+.type-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -47px;
+    font-family: "UnifrakturCook", cursive;
+    font-style: normal;
+}
+
+.character-image-container {
+    width: 198.85px;
+    height: 148.56px;
+}
+
+.mago-imagem {
+    background-image: url(../img/mago.png);
+}
+
+.arqueiro-imagem {
+    background-image: url(../img/arqueiro.png);
+}
+
+.guerreiro-imagem {
+    background-image: url(../img/guerreiro.png);
+}
+
+.arqueiro-mago-imagem {
+    background-image: url(../img/arqueiro-mago.png);
+}
+
+.character-type {
+    width: 153.13px;
+    height: 42.47px;
+    background-image: url(../img/tarja-azul.png);
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: absolute;
+    bottom: -15px;
+    display: flex;
+}
+
+.name-container {
+    width: 191.23px;
+    height: 31.63px;
+    background-image: url(../img/fundo-nome.png);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -28px;
+    font-size: 24px;
+    color: #554B40;
+}
+
+.description-container {
+    width: 191.23px;
+    height: 92px;
+    background-image: url(../img/fundo-descricao.png);
+    margin: 4px auto;
+    text-align: left;
+    font-size: 20px;
+    padding: 16px;
+    color: #554B40;
+}
+
+.low-bar-container {
+    margin-top: 18px;
+    height: 65px;
+    display: flex;
+    color: #CDC8C1;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.green-low-bar {
+    background-image: url(../img/retangulo-verde.png);
+}
+
+.blue-low-bar {
+    background-image: url(../img/retangulo-azul.png);
+}
+
+.red-low-bar {
+    background-image: url(../img/retangulo-vermelho.png);
+}
+
+.purple-low-bar {
+    background-image: url(../img/retangulo-roxo.png);
+}
+
+.mana-container, .life-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mana-icon {
+    background-image: url(../img/icone-mana.png);
+    background-size: 100%;
+    width: 24.38px;
+    height: 24.38px;
+}
+
+.life-icon {
+    background-image: url(../img/icone-vida.png);
+    background-size: 100%;
+    width: 24.38px;
+    height: 24.38px;
+}
+
+.modal-winner-container {
+    height: 120px;
+    width: 336px;
+    background: linear-gradient(180deg, #FAEC75 0%, #CE9424 100%);
+    border: 3px solid #6C3F00;
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+    text-align: center;
+}
+
+.trophy-icon {
+    height: 56px;
+    width: 56px;
+    margin: 0 15px;
+}
+
+.winner-message {
+    font-size: 18px;
+}
+
+
+.modal-winner-close-btn {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.new-character-container {
+    display: flex;
+    background: linear-gradient(180deg, #FAEC75 0%, #CE9424 100%);
+    border: 3px solid #CE9424;
+    width: 400px;
+    border-radius: 16px;
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    z-index: 2;
+}
+
+.new-character-container h2 {
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+.new-character-container input, select {
+    margin: 5px 15px;
+    width: 250px;
+    padding: 3px 10px;
+    font-size: 20px;
+}
+
+.new-character-container select {
+    margin-left: 2px;
+}
+
+#new-character-confirm-btn {
+    width: 50%;
+    margin-left: 90px;
+}
+
+.new-character-close-btn {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin-left: 15px;
+}
+
+.new-character-container ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
