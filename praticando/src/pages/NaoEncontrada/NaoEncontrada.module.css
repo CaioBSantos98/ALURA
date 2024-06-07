@@ -1,0 +1,42 @@
+.container {
+    background-color: #041833;
+    max-height: 50%;
+    color: #FFF;
+}
+
+.textContainer {
+    text-align: center;
+}
+
+.textContainer h2 {
+    color: #1875EB;
+    font-size: 96px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.textContainer h3 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.textContainer p {
+    font-size: 24px;
+}
+
+.itensContainer {
+    position: relative;
+}
+
+.itensContainer button {
+    top: 60px;
+    left: 30%;
+    position: absolute;
+}
+
+.itensContainer img {
+    position: absolute;
+    top: 25px;
+    right: 20%;
+}
+
